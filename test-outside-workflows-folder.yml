@@ -1,0 +1,12 @@
+name: from racine project
+
+on:
+  workflow_call:
+
+jobs:
+  from_racine_project:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Get path
+        run: pwd
