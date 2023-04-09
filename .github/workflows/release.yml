@@ -11,6 +11,9 @@ name: RELEASE
 #permissions:
 #  contents: read # for checkout
 
+env:
+  RELEASE_PERMISSIONS_CONTENTS: write
+
 jobs:
   release:
     permissions:
