@@ -11,6 +11,9 @@ name: RELEASE
 #permissions:
 #  contents: read # for checkout
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   release:
     permissions:
@@ -33,6 +36,4 @@ jobs:
         run: npm install @semantic-release/github -D
 
       - name: Release
-        env:
-          GITHUB_TOKEN: ${{ BUISSET_EMMANUEL_GITHUB_TOKEN:-secrets.GITHUB_TOKEN }}
         run: npx semantic-release
