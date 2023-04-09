@@ -1,0 +1,11 @@
+name: WELCOME
+
+on:
+  workflow_call:
+
+jobs:
+  welcome:
+    steps:
+      run: |
+        echo Welcome !!!
+        echo This job can be used in another project.
