@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-        echo Welcome !!!
-        echo This job can be used in another project.
+        echo "Welcome !!!"
+        echo "This job can be used in another project."
