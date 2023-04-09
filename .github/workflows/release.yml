@@ -8,16 +8,16 @@ name: RELEASE
       - main
   workflow_call:
 
-permissions:
-  contents: read # for checkout
+#permissions:
+#  contents: read # for checkout
 
 jobs:
   release:
     permissions:
       contents: write
-      issues: write # to be able to comment on released issues
-      pull-requests: write # to be able to comment on released pull requests
-      id-token: write # to enable use of OIDC for npm provenance
+#      issues: write # to be able to comment on released issues
+#      pull-requests: write # to be able to comment on released pull requests
+#      id-token: write # to enable use of OIDC for npm provenance
     name: Release
     runs-on: ubuntu-latest
     steps:
