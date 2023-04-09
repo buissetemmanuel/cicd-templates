@@ -17,7 +17,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install and config Libvirt, Vagrant and QEMU
-        run: buissetemmanuel/cicd-templates/.github/workflows/scripts/ubuntu-setup.sh
+        run: .github/workflows/scripts/ubuntu-setup.sh
 
       - name: Run Molecule tests.
         run: molecule test
