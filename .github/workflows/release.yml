@@ -14,7 +14,7 @@ name: RELEASE
 jobs:
   release:
     permissions:
-      contents: ${ RELEASE_CONTENTS_PERMISSIONS:-write } # to be able to publish a GitHub release
+      contents: ${ RELEASE_CONTENTS_PERMISSIONS:-write }
 #      issues: write # to be able to comment on released issues
 #      pull-requests: write # to be able to comment on released pull requests
 #      id-token: write # to enable use of OIDC for npm provenance
