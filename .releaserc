@@ -1,16 +1,9 @@
-branches:
-  - main
-debug: true
-dryRun: true
-plugins:
-  - "@semantic-release/commit-analyzer"
-  - "@semantic-release/release-notes-generator"
-  - "@semantic-release/github"
-verifyConditions:
-  - "@semantic-release/github"
-prepare: false
-publish:
-  - "@semantic-release/github"
-success: false
-fail: false
-npmPublish: false
+{
+  "branches": "main",
+  "debug": "true",
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/github"
+  ]
+}
