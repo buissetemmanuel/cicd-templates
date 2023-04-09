@@ -7,7 +7,6 @@ jobs:
   welcome:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
       - run: |
-        echo "Welcome !!!"
-        echo "This job can be used in another project."
+          echo Welcome !!!
+          echo "This job can be used in another project."
