@@ -1,12 +1,12 @@
 ---
-name: MOLECULE LINT
+name: YAML LINT
 
 on:
   workflow_call:
 
 jobs:
-  molecule-lint:
-    name: Molecule lint
+  yaml-lint:
+    name: YAML lint
     runs-on: ubuntu-latest
     steps:
       - name: Check out the codebase.
@@ -18,10 +18,9 @@ jobs:
           python-version: '3.x'
 
       - name: Install test dependencies.
-        run: pip3 install yamllint ansible-lint
+        run: pip3 install yamllint
 
       - name: Lint code.
         run: |
           set -e
           yamllint .
-          ansible-lint .

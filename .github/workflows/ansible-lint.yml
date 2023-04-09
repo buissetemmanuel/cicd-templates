@@ -1,0 +1,26 @@
+---
+name: ANSIBLE LINT
+
+on:
+  workflow_call:
+
+jobs:
+  ansible-lint:
+    name: Ansible lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the codebase.
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3.
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install test dependencies.
+        run: pip3 install ansible-lint
+
+      - name: Lint code.
+        run: |
+          set -e
+          ansible-lint .
