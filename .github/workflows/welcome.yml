@@ -7,6 +7,6 @@ jobs:
   welcome:
     runs-on: ubuntu-latest
     steps:
-      run: |
+      - run: |
         echo Welcome !!!
         echo This job can be used in another project.
