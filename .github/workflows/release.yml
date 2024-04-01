@@ -32,8 +32,11 @@ jobs:
         with:
           node-version: "lts/*"
 
-      - name: Install dependencies
+      - name: Install github dependency
         run: npm install @semantic-release/github -D
+
+      - name: Install docker dependency
+        run: npm install @semantic-release-plus/docker -D
 
       - name: Release
         run: npx semantic-release
