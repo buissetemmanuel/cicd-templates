@@ -13,6 +13,7 @@ name: RELEASE
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  SEMANTIC_RELEASE_PACKAGES: '@semantic-release/github'
 
 jobs:
   release:
@@ -32,8 +33,14 @@ jobs:
         with:
           node-version: "lts/*"
 
+      - name: Clean node_modules folder
+        run: npm clean-install
+
+      - name: Check npm signatures packages
+        run: corepack npm audit signatures
+
       - name: Install dependencies
-        run: npm install @semantic-release/github -D
+        run: npm install ${{ env.SEMANTIC_RELEASE_PACKAGES }} -D
 
       - name: Release
         run: npx semantic-release
