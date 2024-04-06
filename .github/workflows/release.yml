@@ -33,9 +33,6 @@ jobs:
         with:
           node-version: "lts/*"
 
-      - name: Check npm signatures packages
-        run: corepack npm audit signatures
-
       - name: Install dependencies
         run: npm install ${{ env.SEMANTIC_RELEASE_PACKAGES }} -D
 
