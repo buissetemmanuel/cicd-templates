@@ -33,9 +33,6 @@ jobs:
         with:
           node-version: "lts/*"
 
-      - name: Clean node_modules folder
-        run: npm clean-install
-
       - name: Check npm signatures packages
         run: corepack npm audit signatures
 
