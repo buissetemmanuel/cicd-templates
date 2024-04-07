@@ -13,7 +13,7 @@ name: RELEASE
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  SEMANTIC_RELEASE_PACKAGES: '@semantic-release/github'
+  SEMANTIC_RELEASE_PACKAGES: ${{ env.SEMANTIC_RELEASE_PACKAGES != '' && env.SEMANTIC_RELEASE_PACKAGES || '@semantic-release/github' }}
 
 jobs:
   release:
