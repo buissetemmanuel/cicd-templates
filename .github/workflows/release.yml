@@ -13,6 +13,7 @@ name: RELEASE
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  SEMANTIC_RELEASE_PACKAGES: ${{ env.SEMANTIC_RELEASE_PACKAGES }}
 
 jobs:
   release:
@@ -33,7 +34,7 @@ jobs:
           node-version: "lts/*"
 
       - name: Install dependencies
-        run: npm install ${{ SEMANTIC_RELEASE_PACKAGES }} -D
+        run: npm install ${{ env.SEMANTIC_RELEASE_PACKAGES }} -D
 
       - name: Release
         run: npx semantic-release
