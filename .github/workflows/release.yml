@@ -11,10 +11,6 @@ name: RELEASE
 #permissions:
 #  contents: read # for checkout
 
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  SEMANTIC_RELEASE_PACKAGES: ${{ env.SEMANTIC_RELEASE_PACKAGES }}
-
 jobs:
   release:
     permissions:
