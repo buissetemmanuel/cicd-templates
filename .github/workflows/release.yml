@@ -8,8 +8,12 @@ name: RELEASE
       - main
   workflow_call:
 
-#permissions:
-#  contents: read # for checkout
+permissions:
+  contents: read # for checkout
+
+env:
+  GITHUB_TOKEN: ${{ secrets.PAT_CLASSIC }}
+  SEMANTIC_RELEASE_PACKAGES: '@semantic-release/github'
 
 jobs:
   release:
