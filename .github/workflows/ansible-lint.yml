@@ -21,7 +21,7 @@ jobs:
         run: pip3 install ansible-lint
 
       - name: Install collection dependencies.
-        run: ansible-galaxy collection install community.general
+        run: ansible-galaxy collection install -r molecule/default/collections.yml
 
       - name: Lint code.
         run: |
